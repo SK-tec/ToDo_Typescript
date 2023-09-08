@@ -9,8 +9,8 @@ const port = process.env.PORT || 5000;
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to  ToDo App");
 });
-connectDB();
-//console.log(connectDB());
-app.listen(port, () => {
-  console.log(`Server is running on the port ${port}`);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Server is running on the port ${port}`);
+  });
 });
