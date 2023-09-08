@@ -1,4 +1,3 @@
-import exp from "constants";
 import { Schema, model } from "mongoose";
 // 1. Create an interface representing a document in MongoDB.
 export interface ITask {
